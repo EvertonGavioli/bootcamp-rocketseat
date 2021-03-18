@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title></title>
+  </head>
+  <body>
+    <div id="app">
+      <ul id="ulNomes"></ul>
+    </div>
+    <script>
+      var listNomes = ["Diego", "Gabriel", "Lucas"];
+      var ulElement = document.getElementById("ulNomes");
+
+      for (let index = 0; index < listNomes.length; index++) {
+        const nome = listNomes[index];        
+        textNomeElement = document.createTextNode(nome);
+
+        var liElement = document.createElement("li");
+        liElement.appendChild(textNomeElement);
+
+        ulElement.appendChild(liElement);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title></title>
+  </head>
+  <body>
+    <div id="app">
+      <input type="text" name="inputNome" />
+      <button onClick="adicionar()">Adicionar</button>
+      <ul id="ulNomes"></ul>
+    </div>
+    <script>
+      var listNomes = ["Diego", "Gabriel", "Lucas"];
+      var ulElement = document.getElementById("ulNomes");
+      var inputElement = document.querySelector("[name='inputNome']");
+
+      for (let index = 0; index < listNomes.length; index++) {
+        const nome = listNomes[index];
+        textNomeElement = document.createTextNode(nome);
+
+        var liElement = document.createElement("li");
+        liElement.appendChild(textNomeElement);
+
+        ulElement.appendChild(liElement);
+      }
+
+      function adicionar() {
+        var novoNome = inputElement.value;
+
+        if (novoNome == null || novoNome == "") {
+          return;
+        }
+
+        listNomes.push(novoNome);
+
+        var liElement = document.createElement("li");
+        liElement.appendChild(document.createTextNode(novoNome));
+
+        ulElement.appendChild(liElement);
+
+        inputElement.value = "";
+        inputElement.focus();
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title></title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" name="user" placeholder="Nome Usuário GitHub">
+        <button>Buscar</button>
+        <ul></ul>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        var userElement = document.querySelector("#app input");
+        var btnElement = document.querySelector("#app button");
+        var ulElement = document.querySelector("#app ul");
+
+        btnElement.onclick = buscar;
+
+        function buscar() {
+            ulElement.innerHTML = "";
+            var user = userElement.value;
+
+            if (user == null || user == "") {
+                return;
+            }
+
+            var url = "https://api.github.com/users/" + user + "/repos";
+
+            var liCarregando = createLi("Carregando...");
+            ulElement.appendChild(liCarregando);
+
+            axios.get(url)
+                .then((response) => {
+                    ulElement.innerHTML = "";
+
+                    response.data.forEach(repo => {
+                        var liElement = createLi(repo.name);
+                        ulElement.appendChild(liElement);
+                    });
+                })
+                .catch((error) => {
+                    ulElement.innerHTML = "";
+
+                    if (error.response) {
+                        if (error.response.status == 404) {
+                            var liError = createLi("404 - Usuário '" + user + "' Não Encontrado!!!")
+                            ulElement.appendChild(liError);
+                        } else {
+                            var liError = createLi(error.message)
+                            ulElement.appendChild(liError);
+                        }
+                    } else {
+                        var liError = createLi(error.message)
+                        ulElement.appendChild(liError);
+                    }
+                });
+        }
+
+        function createLi(text) {
+            var newLi = document.createElement("li");
+            newLi.appendChild(document.createTextNode(text));
+
+            return newLi;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title></title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" name="user" placeholder="Nome Usuário GitHub">
+        <button>Buscar</button>
+        <ul></ul>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        var userElement = document.querySelector("#app input");
+        var btnElement = document.querySelector("#app button");
+        var ulElement = document.querySelector("#app ul");
+
+        btnElement.onclick = buscar;
+
+        function buscar() {
+            var user = userElement.value;
+
+            if (user == null || user == "") {
+                return;
+            }
+
+            var url = "https://api.github.com/users/" + user + "/repos";
+
+            axios.get(url)
+                .then((response) => {
+                    ulElement.innerHTML = "";
+                    response.data.forEach(repo => {
+                        var liElement = document.createElement("li");
+                        liElement.appendChild(document.createTextNode(repo.name));
+
+                        ulElement.appendChild(liElement);
+                    });
+                })
+                .catch((error) => {
+                    console.log(error);
+                    ulElement.innerHTML = "";
+                    userElement.value = "";
+                });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="1279.439px" height="171.693px" viewBox="0 0 1279.439 171.693" enable-background="new 0 0 1279.439 171.693"
+	 xml:space="preserve">
+<g id="grid">
+</g>
+<g id="landing_page">
+	<g>
+		<defs>
+			<rect id="SVGID_65_" width="1279.439" height="171.693"/>
+		</defs>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_65_"  overflow="visible"/>
+		</clipPath>
+		<g clip-path="url(#SVGID_2_)">
+			<circle fill="#1DB9EC" cx="185.395" cy="259.65" r="169.939"/>
+			<circle fill="#1DB9EC" cx="902.805" cy="281.846" r="169.939"/>
+			<path fill="#1DB9EC" d="M1279.72,392.477c-93.855,0-169.939-76.084-169.939-169.939s76.084-169.939,169.939-169.939"/>
+			<circle fill="#1DB9EC" cx="517.092" cy="269.641" r="169.939"/>
+			<circle fill="#1DB9EC" cx="324.814" cy="220.424" r="124.939"/>
+			<circle fill="#1DB9EC" cx="764.501" cy="273.93" r="155.974"/>
+			<circle fill="#1DB9EC" cx="416.209" cy="191.695" r="75.195"/>
+			<path fill="#1DB9EC" d="M221.197,203.615c0,89.025-72.17,161.193-161.195,161.193c-89.027,0-161.195-61.725-161.195-150.75
+				S-29.025,42.42,60.002,42.42C149.027,42.42,221.197,114.588,221.197,203.615z"/>
+			<path fill="#1DB9EC" d="M1328.916,259.648c0,119.061-96.518,215.58-215.576,215.58c-119.061,0-215.576-96.52-215.576-215.58
+				c0-119.059,96.516-215.576,215.576-215.576C1232.398,44.072,1328.916,140.59,1328.916,259.648z"/>
+			<circle fill="#1DB9EC" cx="644.326" cy="201.799" r="75.195"/>
+		</g>
+	</g>
+</g>
+<g id="project_page">
+</g>
+<g id="Search">
+</g>
+<g id="user_page">
+</g>
+<g id="dataset_page">
+</g>
+<g id="styles">
+</g>
+<g id="Layer_1">
+</g>
+</svg>

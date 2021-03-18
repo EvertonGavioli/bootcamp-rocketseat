@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        function checaIdade(idade) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    if (idade >= 18) {
+                        resolve();
+                    } else {
+                        reject();
+                    }
+                }, 2000);
+            });
+        }
+
+        checaIdade(20)
+            .then(() => {
+                console.log("Maior que 18");
+            })
+            .catch(() => {
+                console.log("Menor que 18");
+            });
+    </script>
+</body>
+
+</html>

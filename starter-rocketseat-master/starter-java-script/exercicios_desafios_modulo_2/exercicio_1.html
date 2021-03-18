@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title></title>
+  </head>
+  <body>
+    <div id="app">
+      <button id="btn1">Click!</button>
+    </div>
+
+    <script>
+      var btnElement = document.getElementById("btn1");
+      btnElement.style.marginBottom = 10;
+
+      var appElement = document.getElementById("app");
+
+      btnElement.onclick = function() {
+        var boxElement = document.createElement("div");
+        boxElement.style.width = 100;
+        boxElement.style.height = 100;
+        boxElement.style.marginBottom = 10;
+        boxElement.style.backgroundColor = "#f00";
+
+        appElement.appendChild(boxElement);
+      };
+    </script>
+  </body>
+</html>
